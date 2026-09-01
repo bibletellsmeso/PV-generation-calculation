@@ -6,8 +6,8 @@ Python scripts for photovoltaic generation calculation from weather and irradian
 
 | File | Purpose |
 |---|---|
-| `Model 1.py`, `Model 2.py` | Historical photovoltaic-model variants. |
-| `Preprocessing.py` | Prepares weather and scheduling inputs. |
+| `pv_model_v01.py`, `pv_model_v02.py` | Historical photovoltaic-model variants. |
+| `preprocess_weather_inputs.py` | Prepares weather and scheduling inputs. |
 | `Weather Forecast.csv`, `Hawaii weather.csv` | Weather input files used by the scripts. |
 | `Irradiance.csv`, `Degree.csv` | Supporting irradiance and angle inputs. |
 | `PV_for_scheduling.txt` | Scheduling-oriented PV series. |
@@ -24,14 +24,14 @@ The scripts use relative file paths and should be run from the repository root. 
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 python -m pip install -r requirements.txt
-python "Preprocessing.py"
+python preprocess_weather_inputs.py
 ```
 
-Then review the configuration near the top of `Model 1.py` or `Model 2.py` before running a model variant.
+Then review the configuration near the top of `pv_model_v01.py` or `pv_model_v02.py` before running a model variant.
 
 ## Cleanup status
 
-Existing filenames are historical. This branch documents their roles but does not rename, delete, or redistribute data. A later validated migration will use descriptive, space-free filenames and record the path mapping.
+The three root Python scripts have been renamed to descriptive, space-free filenames. Historical input and result data remain unchanged; a later validated migration will record any data-file path mapping before moving or redistributing them.
 
 ## License and citation
 
