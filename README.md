@@ -29,9 +29,11 @@ python preprocess_weather_inputs.py
 
 Then review the configuration near the top of `pv_model_v01.py` or `pv_model_v02.py` before running a model variant.
 
+`pv_model_v01.py` and `preprocess_weather_inputs.py` run with the tracked inputs. `pv_model_v02.py` additionally expects `KPX_PV.csv`, which is not included in this repository. Obtain and document that input (including its source and redistribution permission) before using the second model variant.
+
 ## Cleanup status
 
-The three root Python scripts have been renamed to descriptive, space-free filenames. Historical input and result data remain unchanged; a later validated migration will record any data-file path mapping before moving or redistributing them.
+The three root Python scripts have been renamed to descriptive, space-free filenames. Historical input and result data remain unchanged; a later validated migration will record any data-file path mapping before moving or redistributing them. The model scripts use the `SciencePlots` style package, which is listed in `requirements.txt`.
 
 ## License and citation
 
